@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@unblockneteasemusic/rust-napi": "^0.4.0",
-    "NeteaseCloudMusicApi": "https://github.com/111inhistory/NeteaseCloudMusicApi.git#test1",
+    "NeteaseCloudMusicApi": "^4.24.0",
     "axios": "^0.26.1",
     "change-case": "^4.1.2",
     "cli-color": "^2.0.0",
