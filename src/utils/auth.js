@@ -9,6 +9,7 @@ export function setCookies(string) {
     const cookieKeyValue = cookie.split(';')[0].split('=');
     localStorage.setItem(`cookie-${cookieKeyValue[0]}`, cookieKeyValue[1]);
   });
+  localStorage.setItem('cookie-os', 'pc');
 }
 
 export function getCookie(key) {
