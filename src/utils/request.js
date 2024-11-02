@@ -38,10 +38,15 @@ service.interceptors.request.use(function (config) {
     config.params.realIP = '211.161.244.70';
   }
 
-  if (!config.params.ua) config.params.ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36 Chrome/91.0.4472.164 NeteaseMusicDesktop/3.0.18.203152';
-  
+  // Force real_ip
+  const enableRealIP = JSON.parse(
+    localStorage.getItem('settings')
+  ).enableRealIP;
+  const realIP = JSON.parse(localStorage.getItem('settings')).realIP;
   if (process.env.VUE_APP_REAL_IP) {
     config.params.realIP = process.env.VUE_APP_REAL_IP;
+  } else if (enableRealIP) {
+    config.params.realIP = realIP;
   }
 
   const proxy = JSON.parse(localStorage.getItem('settings')).proxyConfig;
