@@ -40,6 +40,8 @@ service.interceptors.request.use(function (config) {
 
   if (!config.params.ua) config.params.ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36 Chrome/91.0.4472.164 NeteaseMusicDesktop/3.0.18.203152';
 
+  if (!config.params.crypto) config.params.crypto = 'eapi';
+
   // Force real_ip
   const enableRealIP = JSON.parse(
     localStorage.getItem('settings')
