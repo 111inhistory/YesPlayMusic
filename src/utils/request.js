@@ -28,7 +28,7 @@ service.interceptors.request.use(function (config) {
       !process.env.IS_ELECTRON &&
       getCookie('MUSIC_U') !== null
     ) {
-      config.params.cookie = `MUSIC_U=${getCookie('MUSIC_U')};`;
+      config.params.cookie = `MUSIC_U=${getCookie('MUSIC_U')};os=pc`;
     }
   } else {
     console.error("You must set up the baseURL in the service's config");
