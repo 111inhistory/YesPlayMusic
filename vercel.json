@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:match*",
+      "destination": "https://netease-api-skwj111.vercel.app/:match*"
+    }
+  ]
+}
