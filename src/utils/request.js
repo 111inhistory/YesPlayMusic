@@ -29,7 +29,6 @@ service.interceptors.request.use(function (config) {
       getCookie('MUSIC_U') !== null
     ) {
       config.params.cookie = `MUSIC_U=${getCookie('MUSIC_U')}; os=${getCookie('os')}`;
-      config.headers.cookie = config.headers.cookie + `; os=${getCookie('os')}`;
     }
   } else {
     console.error("You must set up the baseURL in the service's config");
