@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:match*",
-      "destination": "https://netease-api-skwj111.vercel.app/:match*"
+      "destination": "https://ncmapi.skwj111.top/:match*"
     }
   ]
 }
